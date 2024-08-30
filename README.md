@@ -1,6 +1,6 @@
 <br>
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/dfe7d3be-b658-42c2-8380-66b0e0eda59d" alt="mainLogo"/>
+  <img src="https://github.com/user-attachments/assets/1a625dc6-024c-48ab-8f2f-53dcc1a3e9b1" alt="mainLogo"/>
 </p>
 <br>
 
@@ -9,55 +9,47 @@
 
 ## 프로젝트 정보
 
-기존의 LMS(학습관리시스템) 한계:
+기존 레시피 제공 서비스의 한계:
 
-- 학습 자료 제공과 진도 관리에만 중점을 두어 실질적인 학습 효과 향상에 제한적임
-- 개인화된 학습 상담 및 피드백 부재로 학습자의 동기부여와 성장 지원 미흡
--유사한 수준과 목표를 가진 스터디 그룹 형성의 어려움
-- 학생 간 상호작용 및 협력 학습을 촉진하는 기능 부족으로 인해 온라인 학습에서 고립감 및 소외감 발생
+- 1인 가구의 특성과 요구사항을 충분히 반영하지 못한 레시피 제공
+- 복잡하고 시간이 많이 소요되는 조리법으로 실용성 부족
 
-**LearnWay** : 이러한 문제점을 해결하고 개개인의 특성과 소통을 중심으로 구현
-- 🎯 **상담사 전용 페이지 및 상담 시스템**: 학습자의 학습 성과를 분석하고 피드백을 강화하여 다양한 분야의 상담사들이 개인 맞춤형 학습 컨설팅 제공
-- 💬 **스터디 커뮤니티**: 학생 간 소통 및 협업을 장려하고 자율적인 학습 주도 촉진
+**서비스 중점** 
+- 🥗 **간편하고 건강한 레시피 제공**: 조리 시간이 짧고 영양가 있는 1인 가구 맞춤형 레시피 큐레이션
+- 💬 **사용자 참여형 커뮤니티**: 레시피 공유, 요리 후기, 팁 교환 등 사용자 간 활발한 정보 교류 촉진
+- 🏋️‍♀️ **헬시플레저 트렌드 반영**: 건강과 즐거움을 동시에 추구하는 현대인의 라이프스타일에 부합하는 콘텐츠 제공
 
 ## 개발 기간
 
-- **시작일**: 2024.06.10
-- **종료일**: 2024.07.12 (총 5주)
+- **시작일**: 2024.03.29
+- **종료일**: 2024.04.30 (총 4주)
 
 ## 팀원 및 주요 기능
 
-1. **박희수** - 스케쥴 관리 및 공지사항 / [NANOOS105](https://github.com/NANOOS105) - 팀장
-2. **박준영** - 회원 관리 및 관리자 페이지 / [PastelQ](https://github.com/PastelQ) 
-3. **이준호** - 화상 채팅 전반 예약 / [ljh0808](https://github.com/ljh0808)
-4. **최광현** - 커뮤니티 게시판 및 채팅 / [epqmfwjs](https://github.com/epqmfwjs)
-5. **한재엽** - 성적 관리 및 CI/CD 환경 구축 / [sunniesfish](https://github.com/sunniesfish)
-
+1. **박희수** - 회원가입 및 마이페이지 / [NANOOS105](https://github.com/NANOOS105)
+2. **양희경** - 커뮤니티 게시판/ [lilyyang0](https://github.com/lilyyang0) 
+3. **곽별** - 레시피 게시판 / [star-kw](https://github.com/star-kw)
+4. **조민선** - 공지사항 게시판 / [minseon-jo](https://github.com/minseon-jo)
+5. **이기백** - 관리자게시판
+   
 ## 기술 스택
 
 <details>
 <summary><strong>언어 및 프레임워크</strong></summary>
 
-- **Java** 17
+- **Java** 11
 - **JavaScript**
 - **CSS**
-- **Spring Boot** 3.3.0
-- **JPA**
-- **Spring Security** 6
-- **MyBatis**
-- **Spring Cloud Starter** 2.4.4
-- **Thymeleaf** 3.0.4
+- **JSP** 2.3
+- **Servlet** 4.0
 
 </details>
 
 <details>
-<summary><strong>데이터베이스 및 클라우드</strong></summary>
+<summary><strong>데이터베이스 및 웹서버</strong></summary>
 
-- **MySQL** 8.0.36
-- **Amazon EC2**
-- **Amazon S3**
-- **Amazon RDS**
-- **AWS CodeDeploy**
+- **ORACLE** 11g Express Edition Release 11.2.0.2.0
+- **Apache Tomcat** 9.0
 
 </details>
 
@@ -65,24 +57,14 @@
 <summary><strong>개발 도구</strong></summary>
 
 - **GitHub**
-- **IntelliJ IDEA**
-- **Spring Tool Suite 4 (STS4)**
+- **Eclipse**
 - **Visual Studio Code (VSCode)**
-
-</details>
-
-<details>
-<summary><strong>프로토콜 및 통신</strong></summary>
-
-- **WebRTC**
-- **WebSocket**
 
 </details>
 
 <details>
 <summary><strong>운영 체제</strong></summary>
 
-- **Ubuntu** 22.04 LTS
-- **Windows** 11
+- **Windows** 10
 
 </details>
