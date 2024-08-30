@@ -1,0 +1,240 @@
+/* PostCSS 플러그인을 가져옴 
+@import "postcss-color-function";
+@import "postcss-nested";
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');*/
+
+/* 전체 body에 대한 스타일 */
+body {
+	background-color: #ffffff;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+a:hover {
+	color: black;
+}
+
+a:focus {
+	outline: none;
+}
+
+a:visited {
+	color: black;
+}
+
+/* 상단바의 배경색과 여백 설정 */
+.banner {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	background-color: #ffffff;
+}
+
+.banner_logo img {
+	height: 40px;
+	margin-right: 20px;
+}
+
+.search_container {
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	border: 1.5px solid #289B6E;
+	border-radius: 20px;
+	padding: 5px;
+	margin-right: auto;
+	height: 25px;
+}
+
+.search_txt {
+	border: none;
+	background-color: transparent;
+	align-self: center;
+	outline: none;
+	color: #289B6E;
+	padding: 5px;
+	font-size: 14px;
+	width: 150px;
+}
+
+.search_txt::placeholder {
+	color: light-gray;
+}
+
+.search_btn {
+	background-color: transparent;
+	border: none;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.search_btn img {
+	height: 20px;
+}
+
+.login_button {
+	color: black;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+}
+/*프로필쪽 수정 추가*/
+/* 프로필 드롭다운 내부 요소 스타일링 */
+.welcome_message {
+	position: relative;
+	margin-bottom: 10px; /* 환영 메시지 아래 여백 */
+	font-weight: bold; /* 굵은 글꼴 */
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 20px;
+	transform: translate(-13px, -13px);
+}
+
+.profile-container {
+	position: relative;
+	transform: translate(10px, 15px);
+}
+
+/* 프로필 이미지 스타일링 */
+.profileimg {
+	width: 40px; /* 프로필 이미지 너비 */
+	height: 40px; /* 프로필 이미지 높이 */
+	border-radius: 50%; /* 원형 모양 */
+	overflow: hidden; /* 넘치는 부분 숨김 */
+	margin-left: 10px; /* 프로필 이미지와 로그인 버튼 간격 조정 */
+}
+
+/* 프로필 이미지 클릭 시 드롭다운 효과 */
+#profile-img:hover+.profile_info {
+	display: block; /* 호버 시 드롭다운 표시 */
+}
+
+/* 프로필 드롭다운 스타일링 */
+.profile_info {
+	display: none; /* 초기에는 숨김 */
+	position: absolute; /* 절대 위치 */
+	top: 60px; /* 프로필 이미지 아래에 위치 */
+	right: 10px; /* 프로필 이미지 오른쪽에 위치 */
+	background-color: #fff; /* 배경색 */
+	border: 1px solid #ccc; /* 테두리 */
+	border-radius: 5px; /* 테두리 모서리 둥글게 */
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+	padding: 10px; /* 내부 여백 */
+}
+
+.profile_button {
+	box-sizing: border-box;
+	background-color: transparent;
+	border: 1px solid #289B6E;
+	border-radius: 0.6em;
+	cursor: pointer;
+	display: flex;
+	align-self: center;
+	font-size: 0.8rem;
+	font-weight: 100;
+	line-height: 1;
+	margin: 5px;
+	padding: 0.4em 0.6em;
+	text-decoration: none;
+	text-align: center;
+}
+
+.profile_buttons a {
+	color: #5a5a5a;
+}
+
+.profile_buttons {
+	display: flex;
+	justify-content: space-around;
+	position: relative;
+	transform: translate(11px, 5px);
+}
+/* 네비게이션 바를 중앙으로 정렬하기 위한 설정 */
+.menu_bar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 0;
+	height: 64px;
+}
+
+/* 각 메뉴의 스타일링 */
+.menu_bar>div {
+	margin-right: 20px;
+	position: relative;
+}
+
+/* 각 메뉴의 하위 메뉴 스타일링 */
+.menu_bar>div ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	background-color: #ffffff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	border-radius: 5px;
+	z-index: 1;
+}
+
+/* 하위 메뉴 링크의 스타일링 */
+.menu_bar>div ul li {
+	list-style: none;
+	margin: 5px 0;
+}
+
+.menu_bar>div ul li a {
+	color: #333333;
+	text-decoration: none;
+}
+
+.menu_link {
+	color: black;
+	text-decoration: none;
+	padding: 8px 12px;
+	border-radius: 5px;
+}
+
+.menu_bar>div ul li a:hover {
+	color: #289B6E;
+}
+
+.menu_link:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 마우스 호버 시 하위 메뉴 표시 */
+.menu_bar>div:hover ul {
+	display: block;
+}
+
+/* 메뉴와 하위 메뉴 사이 간격을 늘립니다. */
+.menu_bar>div+div {
+	margin-left: 30px;
+}
+
+/* 프로필 관련 */
+.profile_info {
+	display: none;
+	position: absolute;
+	top: 60px; /* 프로필 이미지 아래에 위치하도록 조정 */
+	right: 10px; /* 프로필 이미지 오른쪽에 위치하도록 조정 */
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	padding: 10px;
+}
+
+.welcome_message {
+	margin-bottom: 10px;
+	font-weight: bold;
+}

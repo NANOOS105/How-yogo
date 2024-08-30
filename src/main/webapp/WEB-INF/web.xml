@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	
+	<display-name>how-yogo</display-name>
+	<welcome-file-list>
+		<welcome-file>main.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- Community로 변경 -->
+	<servlet>
+		<servlet-name>CommunityList</servlet-name>
+		<servlet-class>community.controller.ListController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommunityList</servlet-name>
+		<url-pattern>/board/community/controller/list.do</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 커뮤니티 게시글 작성 -->
+	<servlet>
+		<servlet-name>CommunityWrite</servlet-name>
+		<servlet-class>community.controller.WriteController</servlet-class>
+		<multipart-config>
+			<max-file-size>1048576</max-file-size> <!-- 1MB -->
+			<max-request-size>10485760</max-request-size> <!-- 10MB -->
+		</multipart-config>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CommunityWrite</servlet-name>
+		<url-pattern>/board/community/Controller/write.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 게시판 페이징 처리를 위한 설정값 -->
+	<context-param>
+		<param-name>POSTS_PER_PAGE</param-name>
+		<param-value>9</param-value>
+	</context-param>
+	<context-param>
+		<param-name>PAGES_PER_BLOCK</param-name>
+		<param-value>5</param-value>
+	</context-param>
+
+
+
+
+	<!-- 첨부 파일 최대 용량 설정 -->
+	<context-param>
+		<param-name>maxPostSize</param-name>
+		<param-value>1024000</param-value>
+	</context-param>
+
+	<!-- encoding -->
+	<filter>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<filter-class>common.CharacterEncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+</web-app>

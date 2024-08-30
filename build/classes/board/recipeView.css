@@ -1,0 +1,340 @@
+body {
+    font-family: "Noto Sans KR", sans-serif;
+  	font-optical-sizing: auto;
+  	font-weight: 400;
+  	font-style: normal;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #d7fff1;
+}
+
+#body {
+	width: 650px;
+	margin: 0 auto;
+	font-family: "Noto Serif KR", serif;
+  	font-weight: 400;
+  	font-style: normal;
+}
+
+#reply {
+	width: 650px;
+	margin: 0 auto;
+}
+
+ul {
+	list-style-type: none;
+  	padding: 0;
+  	margin: 0;
+}
+
+hr {
+	border: none;
+	border-bottom: 1.5px solid #289B6E;
+	padding: 10px;
+}
+
+.recipe-header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.recipe-header img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.recipe-header .recipe-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.recipe-header .recipe-info {
+    margin-top: 10px;
+}
+
+.recipe-header .recipe-info p {
+    margin: 5px 0;
+}
+
+.recipe-title,
+.recipe-info {
+	display: flex;
+	padding: 10px;
+}
+
+.recipe-section {
+    display: flex;
+    align-items: top;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.recipe-image {
+    flex: 4.5;
+    margin-right: 20px;
+}
+
+.recipe-image img {
+    width: 290px;
+    height: auto;
+}
+
+.recipe-content {
+    flex: 5.5;
+}
+
+.recipe-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.recipe-content hr {
+	border: none;
+	border-bottom: 1.5px solid #289B6E;
+	opacity: 0.5;
+}
+
+.recipe-content ul {
+    padding-left: 20px;
+}
+
+.recipe-steps {
+    margin-bottom: 30px;
+}
+
+.recipe-steps h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.recipe-steps ol {
+    padding-left: 20px;
+}
+
+.recipe-steps li {
+    margin-bottom: 20px;
+}
+
+.recipe-steps li::after {
+    content: "";
+    display: block;
+    margin-top: 20px;
+}
+
+.recipe-steps li:last-child::after {
+    border-bottom: none;
+}
+
+.recipe-section {
+	height: 300px;
+	margin-bottom: 20px;
+}
+
+.ingredients-box {
+	font-family: "paybooc-Light", sans-serif;
+	display: flex;
+	justify-content: space-between;
+	padding: 3px;
+}
+
+#key {
+	color: black;
+	font-size: 15px;
+}
+
+#value {
+	color: #668D7F;
+	font-size: 15px;
+}
+
+/* 수정 삭제 버튼 */
+.edit-delete {
+    margin-top: 20px;
+    margin-left: 500px;
+}
+
+.edit-delete a {
+	font-family: "paybooc-Light", sans-serif;
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: #77af9c;
+    color: #d7fff1;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    margin-right: 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.edit-delete a:hover {
+    background-color: #207f59;
+}
+
+/* 조회수와 좋아요 스타일 */
+.recipe-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recipe-info p {
+  margin-right: 10px;
+}
+
+.likes-views {
+  display: flex;
+  align-items: center;
+}
+
+.views,
+.likes {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.views i,
+.likes i {
+  margin-right: 5px;
+}
+
+.views i {
+	color: #289B6E;
+}
+
+/* 좋아요 버튼 */
+.like-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.like-button.liked {
+  color: #ff5722;
+}	
+/* 댓글 스타일 */
+#comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#comment-list li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #eee;
+  position: relative;
+}
+
+#comment-list li:last-child {
+  border-bottom: 1px solid #eee;
+}
+
+#comment-list p {
+  margin: 5px 0;
+}
+
+#comment-list form {
+  display: inline-block;
+}
+
+#comment-list .more-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#comment-list .more-actions:hover .dropdown-menu {
+  display: block;
+}
+
+#comment-list .dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  z-index: 1;
+}
+
+#comment-list .dropdown-menu form {
+  display: inline-block;
+}
+
+#comment-list .dropdown-menu button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+
+#comment-list .dropdown-menu button:hover {
+  background-color: #f2f2f2;
+}
+
+#comment-list .dropdown-menu i {
+  margin-right: 5px;
+  color: #289B6E;
+}
+
+#comment-list .reply-form {
+  margin-left: 20px;
+}
+
+#comment-list textarea {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.comment-submit-button {
+    background-color: #77af9c;
+    color: #d7fff1;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+.comment-submit-button:hover {
+    background-color: #207f59;
+}
+
+/* 댓글 입력 폼 스타일 */
+form[action="RecipeComment"] {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #eee;
+}
+
+form[action="RecipeComment"] textarea {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  resize: vertical;
+}

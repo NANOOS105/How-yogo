@@ -1,0 +1,336 @@
+* {
+  box-sizing:border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 리스트 형식 */
+#recipe-list {
+  font-family: "Noto Serif KR", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#listSection {
+  margin-top: 20px;
+}
+
+#listSection table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  border: none;
+}
+
+#listSection th,
+#listSection td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* 행 간의 구분선 추가 */
+  border-top: none; /* TH 부분의 경계선 제거 */
+  border-left: none; /* TH 부분의 경계선 제거 */
+  border-right: none; /* TH 부분의 경계선 제거 */
+}
+
+#listSection th {
+  text-transform: uppercase;
+}
+
+#listSection tr:first-child td {
+  border-top: none; /* 첫 번째 행의 상단 경계선 제거 */
+}
+
+#listSection tr:last-child td {
+  border-bottom: none; /* 마지막 행의 하단 경계선 제거 */
+}
+
+#listSection td:first-child {
+  text-align: center;
+}
+
+#listSection a {
+  color: #333;
+  text-decoration: none;
+}
+
+#listSection a:hover {
+  color: #000;
+}
+
+#listSection tr:not(:first-child):hover {
+  background-color: #f2f2f2; /* 게시물 행에만 hover 효과 적용 */
+}
+
+
+/* 카드 형식 */
+#cardSection {
+	display: flex;
+  	justify-content: center;
+  	width: 980px;
+  	margin: 0 auto;
+}
+
+.card {
+    display: inline-block;
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 22px;
+    overflow: hidden;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.card-content {
+    padding: 10px;
+    position: relative;
+}
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.card-author {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 5px;
+}
+.card-category {
+    display: inline-block;
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.card-likes {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ff5722;
+    font-size: 14px;
+}
+.like-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    font-size: 14px;
+    color: #888;
+}
+.like-button.liked {
+    color: #ff5722;
+}
+.like-button i {
+    margin-right: 5px;
+}
+
+.views,
+.views i {
+	color: #289B6E;
+}
+
+/* 정렬, 보기형식 버튼 css */
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+
+/* 보기형식 버튼 */
+.checkbox-switch {
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    width: 80px;
+    height: 30px;
+    -webkit-border-radius: 30px;
+    border-radius: 30px;
+    line-height: 1.2;
+    font-size: 14px;
+}
+
+.checkbox-switch input.input-checkbox {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 80px;
+	height: 30px;
+	padding: 0;
+	margin: 0;
+	opacity: 0;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.checkbox-switch .checkbox-animate {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background-color: #95a5a6;
+    -webkit-transition: background 0.25s ease-out 0s;
+    transition: background 0.25s ease-out 0s;
+}
+
+.checkbox-switch .checkbox-animate:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background-color: #f0f0f0;
+	top: 5px;
+	left: 5px;
+	 -webkit-transition: left 0.3s ease-out 0s;
+    transition: left 0.3s ease-out 0s;
+    z-index: 10;
+}
+
+.checkbox-switch input.input-checkbox:checked + .checkbox-animate {
+	background-color: #f0f0f0;
+}
+
+.checkbox-switch input.input-checkbox:checked + .checkbox-animate:before {
+	left: 55px;
+	background-color: #7f8c8d;
+}
+
+.checkbox-switch .checkbox-off,
+.checkbox-switch .checkbox-on {
+	float: left;
+	color: #2d2d2d;
+	font-weight: 100;
+	padding-top: 6px;
+	 -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.checkbox-switch .checkbox-off {
+	margin-left: 30px;
+	opacity: 1;
+}
+
+.checkbox-switch .checkbox-on {
+	display: none;
+	float: right;
+	margin-right: 35px;
+	opacity: 0;
+}
+
+.checkbox-switch input.input-checkbox:checked + .checkbox-animate .checkbox-off {
+	display: none;
+	opacity: 0;
+}
+
+.checkbox-switch input.input-checkbox:checked + .checkbox-animate .checkbox-on {
+	display: block;
+	opacity: 1;
+}
+
+/* 정렬 토글 버튼 */
+.toggle-container {
+  background-color: #f0f0f0;
+  padding: 3px;
+  display: inline-block;
+  border-radius: 15px;
+  height: 30px;
+}
+
+.toggle-buttons {
+  display: flex;
+}
+
+.toggle-button {
+  padding: 0px 15px;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.toggle-button.active {
+  color: #7f8c8d;
+}
+
+.toggle-button.active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100%);
+  height: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  z-index: -1;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+
+/* 하단 메뉴 */
+.bottom {
+  display: flex;
+  justify-content: center; /* 페이지를 중앙에 정렬합니다 */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.bottom > div {
+  display: flex;
+  align-items: center;
+}
+
+.bottom form {
+  margin-left: auto; /* 글쓰기 버튼을 오른쪽으로 이동합니다 */
+}
+
+.bottom input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #77af9c;
+  color: #d7fff1;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+}
+
+.bottom input[type="submit"]:hover {
+  background-color: #207f59;
+}
+
+.bottom a {
+  color: #333;
+  text-decoration: none;
+}
+
+.bottom a:hover {
+  color: #000;
+}
